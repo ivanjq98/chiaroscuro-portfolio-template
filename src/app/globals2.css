@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  /* ─── CUSTOM THEME VARIABLES (Tailwind v4 Way) ─── */
+  --color-bg: var(--bg);
+  --color-bg2: var(--bg2);
+  --color-bg3: var(--bg3);
+  --color-accent: var(--accent);
+  --color-accent2: var(--accent2);
+  --color-textMain: var(--text-main);
+  --color-muted: var(--muted);
+  --color-cardBg: var(--card-bg);
+  --color-borderCustom: var(--border-custom);
+
+  --font-serif: var(--font-serif), serif;
+  --font-sans: var(--font-sans), sans-serif;
+  --font-mono: var(--font-mono), monospace;
+}
+
+/* ─── DAY MODE (Parchment & Gallery Tones) ─── */
+:root {
+  --bg: #f9f8f3;
+  --bg2: #f2f0e5;
+  --bg3: #e9e6d5;
+  --accent: #8e792a;
+  --accent2: #b59f4f;
+  --text-main: #2b2a25;
+  --muted: #6e6b5e;
+  --card-bg: #fdfdfb;
+  --border-custom: rgba(142, 121, 42, 0.15);
+}
+
+/* ─── NIGHT MODE (Premium Charcoal & Gold) ─── */
+.dark {
+  --bg: #0a0a08;
+  --bg2: #111110;
+  --bg3: #191917;
+  --accent: #c8b560;
+  --accent2: #e8d48a;
+  --text-main: #e8e4d9;
+  --muted: #7a7870;
+  --card-bg: #141412;
+  --border-custom: rgba(200, 181, 96, 0.15);
+}
+
+/* ─── GLOBAL UTILITIES ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Scroll reveal engine utility classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
