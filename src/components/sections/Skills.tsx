@@ -26,7 +26,7 @@ export default function Skills() {
 
             {/* Skill bars */}
             <div className="flex flex-col gap-5">
-              {group.skills.map((skill, i) => (
+            {group.skills.map((skill: any, i: number) => (
                 <div key={skill.name}>
                   <div className="flex justify-between mb-2">
                     <span className="text-sm text-text">{skill.name}</span>

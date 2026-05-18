@@ -46,9 +46,9 @@ export default function Projects() {
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
-                {project.tags.map((tag) => (
-                  <Tag key={tag} label={tag} />
-                ))}
+              {project.tags.map((tag: string) => (
+                <Tag key={tag} label={tag} />
+              ))}
               </div>
 
               <a

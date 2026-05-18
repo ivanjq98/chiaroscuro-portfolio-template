@@ -34,9 +34,9 @@ export default function Work() {
               </p>
 
               <div className="flex flex-wrap gap-2 mt-auto">
-                {job.tags.map((tag) => (
-                  <Tag key={tag} label={tag} />
-                ))}
+              {job.tags.map((tag: string) => (
+                <Tag key={tag} label={tag} />
+              ))}
               </div>
             </HoverCard>
           </StaggerItem>
